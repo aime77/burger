@@ -1,0 +1,25 @@
+body{
+    margin-top: 12rem;
+    font-size:1rem;
+    background-image: url('/assets/img/bg1.jpg');
+    background-color:orange;
+    color: black;
+    width:100%;
+}
+
+#picture{
+    background-image: url('../assets/img/justDoIt.png')
+}
+
+h1{
+    font-family: 'Sedgwick Ave', cursive;
+}
+h2{
+    font-family: 'Courgette', cursive;
+    font-size: 2rem;
+}
+#bNew{
+width:22rem;
+height:3rem;
+text-align: initial;
+}
