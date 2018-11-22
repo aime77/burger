@@ -22,7 +22,8 @@ var orm = {
 	// Function that returns all table entries
 	selectAll: (tableInput, cb) =>{
 		// Construct the query string that returns all rows from the target table
-		var queryString = `SELECT * FROM  ${tableInput};`;
+		var queryString = `SELECT * FROM  ${tableInput} ORDER BY
+        id DESC;`;
 
 		// Perform the database query
 		connection.query(queryString, function(err, result) {
