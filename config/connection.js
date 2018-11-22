@@ -1,3 +1,4 @@
+//require('./app.dotenv').config();
 const mysql = require('mysql');
 let connection;
 
@@ -20,3 +21,5 @@ connection.connect(err=> {
 
 
 module.exports=connection;
+
+
