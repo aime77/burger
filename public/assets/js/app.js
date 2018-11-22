@@ -1,6 +1,7 @@
 $(function() {
 
 $(".change-devoured").on("click", function(event) {
+  $(this).prop('disabled', true);
   let id = $(this).data("id");
   let newStatus = $(this).data("devour");
   console.log(newStatus);

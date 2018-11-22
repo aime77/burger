@@ -1,41 +1,45 @@
 <div class='py-9'>
-<h1 class="text-center my-5">Yum-Yum-Burgers!!!</h1>
+    <h1 class="text-center my-5">Yum-Yum-Burgers!!!</h1>
 </div>
 
 <div id='picture' class="row align-items-center justify-content-center">
     <img src='assets/img/Burger_Girl3.jpg' height=200 width=300>
 </div>
 
-<form class="create-form container col-5">
-    <div class="form-group" class="mx-auto" style="width: 200px;">
-        <label for="bNew"></label>
-        <input type="text" id="bNew" name="burger_name" placeholder='Enter a Yum-Yum-Burger name!'>
-    </div>
+<div class='container col-3 align-items-center justify-content-center'>
+    <form class="create-form container ">
+        <div class="form-group" style="width: 200px;">
+            <label for="bNew"></label>
+            <input type="text" id="bNew" name="burger_name" placeholder='Enter a Yum-Yum-Burger name!'>
+        </div>
 
-    <button type="submit" class="btn btn-success">Get Burger</button>
-</form>
+        <button type="submit" class="btn btn-success">Get Burger</button>
+    </form>
+</div>
 
 <div class='row'>
-<div id='uneaten' class='container col-5 py-3 mx-0'>
-    
-        <div class='col-5 float-right'>
-            <h2 class="text-center">Eat Me!</h2>
-            <div class='row'>
-            <ul class="list-group float-right">
-                {{#each burgers}} {{#unless devoured}} {{> burgers/burger-devour devoured=true}} {{/unless}} {{/each}}
-            </ul>
-        </div>
-    </div>
-</div>
+    <div id='uneaten' class='container col-6 py-3'>
 
-<div id='eaten' class='container col-5 py-3'>
-    <div class='col-5'>
-        <h2 class="text-center">Yum Yum!</h2>
-        <div class='row'>
-            <ul class="list-group float-left">
-                {{#each burgers}} {{#if devoured}} {{> burgers/burger-devour devoured=false}} {{/if}} {{/each}}
-            </ul>
+        <div class='col-5 float-right'>
+
+            <div class='container'>
+                <h2 class='text-center'>Eat Me!</h2>
+                <ul class="list-group float-right">
+                    {{#each burgers}} {{#unless devoured}} {{> burgers/burger-devour devoured=true}} {{/unless}} {{/each}}
+                </ul>
+            </div>
         </div>
     </div>
-</div>
+
+    <div id='eaten' class='container col-6 py-3'>
+        <div class='col-5 float-left'>
+
+            <div class='container'>
+                <h2>Yum Yum!</h2>
+                <ul class="list-group float-left">
+                    {{#each burgers}} {{#if devoured}} {{> burgers/burger-devoured devoured=false}} {{/if}} {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
