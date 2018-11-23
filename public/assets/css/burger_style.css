@@ -7,10 +7,6 @@ body{
     width:100%;
 }
 
-#picture{
-    background-image: url('../assets/img/justDoIt.png')
-}
-
 h1{
     font-family: 'Sedgwick Ave', cursive;
 }
